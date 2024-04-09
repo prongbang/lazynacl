@@ -6,6 +6,12 @@ End-to-End Encryption an wrapper for Nacl in golang.
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/prongbang)
 
+### Algorithm details
+
+- Key exchange: X25519
+- Encryption: XSalsa20
+- Authentication: Poly1305
+
 ### Install
 
 ```
