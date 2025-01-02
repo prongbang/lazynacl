@@ -40,8 +40,14 @@ keyPair := lazynacl.NewKeyPair()
 ```go
 clientKp := lazynacl.NewKeyPair()
 serverKp := lazynacl.NewKeyPair()
-clientSharedKey := clientKp.Exchange(serverKp.Pk)
-serverSharedKey := serverKp.Exchange(clientKp.Pk)
+clientSharedKey := lazynacl.KeyPair{
+  Pk: serverKeyPair.Pk,
+  Sk: clientKeyPair.Sk,
+}
+serverSharedKey := lazynacl.KeyPair{
+  Pk: clientKeyPair.Pk,
+  Sk: serverKeyPair.Sk,
+}
 ```
 
 - Encrypt
